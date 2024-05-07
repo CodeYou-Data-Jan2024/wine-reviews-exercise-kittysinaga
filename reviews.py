@@ -10,11 +10,8 @@ summary1=df.groupby("country").taster_name.value_counts()
 # create a series by country and average points
 summary2=df.groupby("country").points.mean()
 
-# specify only 1 decimal point
-pd.set_option("display.precision",1)
-
-# combine both series, with 1st column being country
-summary=pd.merge(summary1,summary2,on="country")
+# combine both series, with 1st column being country and rounding to 2 decimal points
+summary=pd.merge(summary1,summary2,on="country").round(2)
 
 # write the data frame onto a csv file
 file_path2="C:/Users/kitty/wine-reviews-exercise-kittysinaga/data/reviews-per-country.csv"
