@@ -18,4 +18,4 @@ summary=pd.merge(summary1,summary2,on="country")
 
 # write the data frame onto a csv file
 file_path2="C:/Users/kitty/wine-reviews-exercise-kittysinaga/data/reviews-per-country.csv"
-summary.to_csv(file_path2,index=False)
+summary.to_csv(file_path2)
